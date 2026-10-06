@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f6faf5;
+    display: flex;
+    color: #354238;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #ffffff, #f1f8f1);
+    padding: 25px 18px;
+    box-shadow: 3px 0 18px rgba(60, 100, 65, 0.10);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e2eee2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 27px;
+    font-weight: 700;
+    color: #3f7d45;
+    margin-bottom: 40px;
+}
+
+.logo span {
+    font-size: 16px;
+    line-height: 1.3;
+    color: #355d3a;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #59655c;
+    padding: 13px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: #eaf5e9;
+    color: #3f7d45;
+    transform: translateX(3px);
+}
+
+nav a.active {
+    background: #dff0df;
+    color: #2f6b36;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   LOGOUT
+   ========================================= */
+
+.logout-btn {
+    margin-top: auto;
+    padding: 12px;
+    border: 1px solid #f1d7d2;
+    border-radius: 12px;
+    background: #fff5f3;
+    color: #d65c4c;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #ffe9e5;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   TOPBAR
+   ========================================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 28px;
+    color: #2f5f35;
+}
+
+.topbar p {
+    color: #7a857c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    padding: 11px 16px;
+    border-radius: 14px;
+    border: 1px solid #e0ece0;
+    box-shadow: 0 4px 12px rgba(60, 100, 65, 0.06);
+}
+
+.admin-profile strong {
+    color: #355d3a;
+}
+
+.admin-profile small {
+    display: block;
+    color: #8a948c;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+   ========================================= */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #e3eee3;
+    box-shadow: 0 6px 18px rgba(60, 100, 65, 0.07);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(60, 100, 65, 0.12);
+}
+
+.card-icon {
+    font-size: 28px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf7ec;
+    border-radius: 14px;
+}
+
+.card h3 {
+    font-size: 13px;
+    color: #7b867d;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: 700;
+    color: #3f7d45;
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   WELCOME
+   ========================================= */
+
+.welcome {
+    margin-top: 30px;
+    background: linear-gradient(
+        135deg,
+        #eef8eb,
+        #fffdf5
+    );
+    padding: 28px 30px;
+    border-radius: 18px;
+    border: 1px solid #dfebdc;
+    border-left: 5px solid #5b985f;
+    box-shadow: 0 6px 18px rgba(60, 100, 65, 0.06);
+}
+
+.welcome h2 {
+    color: #315f37;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #758078;
+}
+
+
+/* =========================================
+   USER & PRODUCT TABLE SECTIONS
+   ========================================= */
+
+.admin-users,
+.admin-products {
+    background: #ffffff;
+    padding: 25px;
+    margin-top: 26px;
+    border-radius: 18px;
+    border: 1px solid #e0ece0;
+    box-shadow: 0 7px 20px rgba(60, 100, 65, 0.07);
+}
+
+.admin-users h2,
+.admin-products h2 {
+    margin-bottom: 20px;
+    color: #315f37;
+    font-size: 20px;
+}
+
+
+/* =========================================
+   TABLE CONTAINER
+   ========================================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 13px;
+    border: 1px solid #dfeade;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.table-container table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+}
+
+
+/* =========================================
+   TABLE HEADER
+   ========================================= */
+
+.table-container thead {
+    background: #eaf5e8;
+}
+
+.table-container th {
+    padding: 15px 14px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #315f37;
+    border-bottom: 2px solid #d5e5d3;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE BODY
+   ========================================= */
+
+.table-container td {
+    padding: 14px;
+    font-size: 13px;
+    color: #566158;
+    border-bottom: 1px solid #edf1ed;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   ALTERNATE ROW
+   ========================================= */
+
+.table-container tbody tr:nth-child(even) {
+    background: #fbfdfb;
+}
+
+
+/* =========================================
+   HOVER ROW
+   ========================================= */
+
+.table-container tbody tr:hover {
+    background: #f0f8ee;
+    transition: 0.2s ease;
+}
+
+
+/* =========================================
+   EMPTY TABLE MESSAGE
+   ========================================= */
+
+.table-container td[colspan] {
+    text-align: center;
+    padding: 25px;
+    color: #89938b;
+}
+
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+.table-container::-webkit-scrollbar {
+    height: 7px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f5f1;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #b8cfb8;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-users,
+    .admin-products {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    body {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+    .logout-btn {
+        margin-top: 15px;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .topbar h1 {
+        font-size: 22px;
+    }
+
+    .admin-profile {
+        display: none;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-users,
+    .admin-products {
+        padding: 17px;
+    }
+}

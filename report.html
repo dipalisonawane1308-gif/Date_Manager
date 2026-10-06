@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reports</title>
+
+<link rel="stylesheet" href="report.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Reports</h1>
+
+    <!-- Monthly Chart -->
+    <div class="chart-box">
+
+        <h2>Monthly Report</h2>
+
+        <canvas id="monthlyChart"></canvas>
+
+    </div>
+
+
+    <!-- Category Chart -->
+    <div class="chart-box">
+
+        <h2>Category Report</h2>
+
+        <canvas id="categoryChart"></canvas>
+
+    </div>
+
+
+    <!-- Previous Months History -->
+    <div class="history-box">
+
+        <h2>📅 Previous Months History</h2>
+
+        <div class="history-controls">
+
+            <label for="monthSelect">
+                Select Month:
+            </label>
+
+            <select id="monthSelect">
+
+                <option value="">
+                    Select Month
+                </option>
+
+            </select>
+
+            <button id="exportExcel">
+                📥 Export Excel
+            </button>
+
+        </div>
+
+
+        <!-- History Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Manufacturing Date</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="historyTableBody">
+
+                    <tr>
+
+                        <td colspan="6">
+                            Select a month to view records.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="report.js"></script>
+
+</body>
+
+</html>
+

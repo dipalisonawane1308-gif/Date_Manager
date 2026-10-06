@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin - Products</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===============================
+         Sidebar
+         =============================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🌿
+            <span>Food Expiry<br>Manager</span>
+        </div>
+
+        <nav>
+
+            <a href="admin.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="admin-users.html">
+                👥 Users
+            </a>
+
+            <a href="admin-products.html" class="active">
+                📦 Products
+            </a>
+
+           
+
+            <a href="admin-reports.html">
+                📊 Reports
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" id="logoutBtn">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- ===============================
+         Main Content
+         =============================== -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>All Products</h1>
+
+                <p>
+                    View products added by all registered users
+                </p>
+
+            </div>
+
+            <div class="admin-profile">
+
+                👨‍💼
+
+                <div>
+
+                    <strong>Admin</strong>
+
+                    <small>Administrator</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ===============================
+             Product Summary
+             =============================== -->
+
+        <section class="summary">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📦
+                </div>
+
+                <div>
+
+                    <h3>Total Products</h3>
+
+                    <p id="totalProducts">
+                        0
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚠️
+                </div>
+
+                <div>
+
+                    <h3>Expiring Soon</h3>
+
+                    <p id="expiringProducts">
+                        0
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ❌
+                </div>
+
+                <div>
+
+                    <h3>Expired</h3>
+
+                    <p id="expiredProducts">
+                        0
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================
+             Products Table
+             =============================== -->
+
+        <section class="admin-products">
+
+            <h2>
+                📦 Users & Their Products
+            </h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>User Name</th>
+
+                            <th>User Email</th>
+
+                            <th>Product</th>
+
+                            <th>Category</th>
+
+                            <th>Quantity</th>
+
+                            <th>Manufacturing Date</th>
+
+                            <th>Expiry Date</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="productsTableBody">
+
+                        <tr>
+
+                            <td colspan="8" style="text-align:center;">
+                                Loading Products...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin-products.js"></script>
+
+</body>
+
+</html>

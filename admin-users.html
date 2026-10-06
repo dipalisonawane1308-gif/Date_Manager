@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin - Users</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===============================
+         Sidebar
+         =============================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🌿
+            <span>Food Expiry<br>Manager</span>
+        </div>
+
+        <nav>
+
+            <a href="admin.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="admin-users.html" class="active">
+                👥 Users
+            </a>
+
+            <a href="admin-products.html">
+                📦 Products
+            </a>
+
+            
+
+            <a href="admin-reports.html">
+                📊 Reports
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" id="logoutBtn">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- ===============================
+         Main Content
+         =============================== -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Registered Users</h1>
+
+                <p>
+                    View all registered users and their product count
+                </p>
+
+            </div>
+
+            <div class="admin-profile">
+
+                👨‍💼
+
+                <div>
+
+                    <strong>Admin</strong>
+
+                    <small>Administrator</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ===============================
+             Total Users
+             =============================== -->
+
+        <section class="summary">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    👥
+                </div>
+
+                <div>
+
+                    <h3>Total Users</h3>
+
+                    <p id="totalUsers">
+                        0
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===============================
+             Users Table
+             =============================== -->
+
+        <section class="admin-products">
+
+            <h2>
+                👥 All Registered Users
+            </h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Sr. No.</th>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Mobile</th>
+
+                            <th>Total Products</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="usersTableBody">
+
+                        <tr>
+
+                            <td colspan="5" style="text-align:center;">
+                                Loading Users...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin-users.js"></script>
+
+</body>
+
+</html>

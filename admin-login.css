@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #eef7ff, #f4efff);
+}
+
+/* Admin Login Box */
+.admin-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Admin Icon */
+.admin-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f1ff;
+    border-radius: 50%;
+    font-size: 38px;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #d8dce5;
+    border-radius: 10px;
+
+    outline: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #6c8cff;
+    box-shadow: 0 0 5px rgba(108, 140, 255, 0.2);
+}
+
+/* Login Button */
+.admin-btn {
+    width: 100%;
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6c8cff;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-btn:hover {
+    background: #5575e8;
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+
+    color: #6c8cff;
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ========================= */
+/* TABLET RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .admin-container {
+        max-width: 380px;
+        padding: 35px 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .admin-container {
+        width: 100%;
+        padding: 30px 22px;
+        border-radius: 16px;
+    }
+
+    .admin-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-group input {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    .admin-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .back-link {
+        font-size: 13px;
+    }
+}
+
+
+/* ========================= */
+/* VERY SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 350px) {
+
+    .admin-container {
+        padding: 25px 18px;
+    }
+
+    .admin-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

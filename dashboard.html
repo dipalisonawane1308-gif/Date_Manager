@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Food Expiry date Manager</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- QR Scanner -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>🥗Track your food</h2>
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li>
+                <i class="fa-solid fa-qrcode"></i>
+                Scan Product
+            </li>
+
+
+            <li
+            onclick="window.location.href='report.html'" style="cursor:pointer;">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </li>
+
+            <li 
+            id="notificationMenu"
+                onclick="window.location.href='notification.html'" style="cursor:pointer;">
+                <i class="fa-solid fa-bell"></i>
+                Notifications
+            </li>
+
+            <li id="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Header -->
+
+        <header>
+
+            <div>
+
+                <h1>Food Expiry Date Manager</h1>
+
+                <p>
+                    Welcome,
+                    <span id="userName"></span>
+                    👋
+                </p>
+
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-solid fa-user-circle"></i>
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="cards">
+
+            <div class="card total">
+
+                <i class="fa-solid fa-box"></i>
+
+                <h3>Total Products</h3>
+
+                <h2 id="totalProducts">0</h2>
+
+            </div>
+
+            <div class="card warning">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Expiring Soon</h3>
+
+                <h2 id="expiringProducts">0</h2>
+
+            </div>
+
+            <div class="card expired">
+
+                <i class="fa-solid fa-circle-xmark"></i>
+
+                <h3>Expired</h3>
+
+                <h2 id="expiredProducts">0</h2>
+
+            </div>
+
+            <div class="card fresh">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <h3>Fresh</h3>
+
+                <h2 id="freshProducts">0</h2>
+
+            </div>
+
+        </section>
+        <!-- QR Scanner Section -->
+        <section class="scanner-section">
+
+            <h2>📷 Scan Food Product</h2>
+            <p>Click the button below to scan a product QR code.</p>
+
+            <button id="scanBtn">
+                <i class="fa-solid fa-camera"></i>
+                Scan QR Code
+            </button>
+
+            <!-- Camera will open here -->
+            <div id="reader" style="display:none; margin-top:20px;"></div>
+
+        </section>
+
+        <!-- Product Table -->
+        <section class="table-section">
+
+            <h2>📋 Food Products</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Manufacturing date</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="foodTableBody">
+
+                    <tr>
+
+                        <td colspan="6" style="text-align:center;">
+                            No Products Available
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+       
+<!-- Dashboard JavaScript -->
+<script src="dashboard.js"></script>
+
+</body>
+</html>

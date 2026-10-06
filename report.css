@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    }
+    
+    body{
+    background:#f4f6f9;
+    padding:30px;
+    }
+    
+    .container{
+    max-width:1000px;
+    margin:auto;
+    }
+    
+    h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2e7d32;
+    }
+    
+    .chart-box{
+    background:#fff;
+    padding:20px;
+    margin-bottom:30px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    }
+    
+    .chart-box h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+    }
+    
+    canvas{
+    width:100%!important;
+    max-height:350px;
+    }

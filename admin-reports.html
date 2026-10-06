@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin - User Reports</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===============================
+         Sidebar
+         =============================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🌿
+            <span>Food Expiry<br>Manager</span>
+        </div>
+
+        <nav>
+
+            <a href="admin.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="admin-users.html">
+                👥 Users
+            </a>
+
+            <a href="admin-products.html">
+                📦 Products
+            </a>
+
+            
+
+            <a href="admin-reports.html" class="active">
+                📊 Reports
+            </a>
+
+        </nav>
+
+        <button class="logout-btn" id="logoutBtn">
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- ===============================
+         Main Content
+         =============================== -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>User Reports</h1>
+
+                <p>
+                    View individual product reports and history
+                </p>
+
+            </div>
+
+            <div class="admin-profile">
+
+                👨‍💼
+
+                <div>
+
+                    <strong>Admin</strong>
+
+                    <small>Administrator</small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ===============================
+             Select User
+             =============================== -->
+
+        <section class="welcome">
+
+            <h2>👤 Select User</h2>
+
+            <p>
+                Select a user to view their individual report.
+            </p>
+
+            <select id="userSelect">
+
+                <option value="">
+                    -- Select User --
+                </option>
+
+            </select>
+            <br><br>
+
+<select id="monthSelect">
+    <option value="all">📅 All Months</option>
+</select>
+
+        </section>
+
+
+        <!-- ===============================
+             User Report
+             =============================== -->
+
+        <section id="reportSection" style="display:none;">
+
+            <div class="welcome">
+
+                <h2 id="reportUserName">
+                    User Report
+                </h2>
+
+                <p id="reportUserEmail"></p>
+
+            </div>
+
+
+            <!-- Summary -->
+
+            <section class="summary">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <h3>Total Products</h3>
+
+                        <p id="userTotalProducts">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🌿
+                    </div>
+
+                    <div>
+
+                        <h3>Fresh</h3>
+
+                        <p id="userFreshProducts">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <h3>Expiring Soon</h3>
+
+                        <p id="userExpiringProducts">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        ❌
+                    </div>
+
+                    <div>
+
+                        <h3>Expired</h3>
+
+                        <p id="userExpiredProducts">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===============================
+                 Product History
+                 =============================== -->
+
+            <section class="admin-products">
+
+                <h2>
+                    📅 Product History
+                </h2>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Month</th>
+
+                                <th>Product</th>
+
+                                <th>Category</th>
+
+                                <th>Quantity</th>
+
+                                <th>Manufacturing Date</th>
+
+                                <th>Expiry Date</th>
+
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="reportTableBody">
+
+                            <tr>
+
+                                <td colspan="7" style="text-align:center;">
+                                    Select a user
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin-reports.js"></script>
+
+</body>
+
+</html>
